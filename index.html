@@ -1,0 +1,2870 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title data-i18n="meta_title">
+        TV Loomi | Movies, Football, Global TV and Shows Without Ads
+    </title>
+
+    <meta name="description" content="Download TV Loomi APK and enjoy movies, football, sports events, global TV channels and short-form shows in one app. Free, ad-free and with no subscription." data-i18n-content="meta_description">
+
+    <meta name="theme-color" content="#0b1020">
+
+    <noscript>
+        <img
+            height="1"
+            width="1"
+            style="display:none"
+            src="https://www.facebook.com/tr?id=2321578038271781&ev=PageView&noscript=1"
+            alt=""
+        />
+    </noscript>
+
+    <noscript>
+        <img
+            height="1"
+            width="1"
+            style="display:none"
+            src="https://www.facebook.com/tr?id=1732920794799259&ev=PageView&noscript=1"
+            alt=""
+        />
+    </noscript>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
+
+    <script>
+    window.TVLOOMI_FORCED_LANG =
+        "en";
+
+    window.TVLOOMI_BRAND_NAME =
+        "LOOMITV";
+</script>
+
+
+<style>
+:root{
+  --bg:#f5f7fb; --surface:#fff; --ink:#0d1324; --muted:#65718b; --line:#dbe3f0;
+  --blue:#2d55ff; --violet:#8f5bff; --lime:#b6f23a; --lime2:#ddff70; --dark:#0b1020;
+  --shadow:0 16px 50px rgba(13,19,36,.08); --shadow-lg:0 26px 90px rgba(10,16,32,.14);
+}
+
+*{
+  box-sizing:border-box
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%
+}
+
+body{
+  margin:0;
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:
+    linear-gradient(90deg, rgba(16,28,53,.05) 1px, transparent 1px) 0 0/120px 120px,
+    linear-gradient(rgba(16,28,53,.05) 1px, transparent 1px) 0 0/120px 120px,
+    radial-gradient(circle at top left, rgba(45,85,255,.08), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(182,242,58,.08), transparent 25%),
+    var(--bg);
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none
+}
+
+img{
+  max-width:100%;
+  display:block
+}
+
+.wrap{
+  width:min(1200px,calc(100% - 32px));
+  margin:0 auto
+}
+
+.nav{
+  position:sticky;
+  top:0;
+  z-index:80;
+  background:rgba(245,247,251,.78);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(199,212,234,.75)
+}
+
+.nav-in{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:12px 0
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:0
+}
+
+.brand img{
+  width:46px;
+  height:36px;
+  object-fit:contain;
+  flex:0 0 auto
+}
+
+.brand strong{
+  font-size:20px;
+  letter-spacing:-.04em;
+  white-space:nowrap
+}
+
+.nav-links{
+  display:flex;
+  gap:6px;
+  align-items:center;
+  overflow:auto;
+  white-space:nowrap;
+  max-width:50vw;
+  padding:4px
+}
+
+.nav-links a{
+  font-size:12px;
+  font-weight:800;
+  color:#465577;
+  padding:8px 10px;
+  border-radius:999px
+}
+
+.nav-links a:hover{
+  background:#fff
+}
+
+/* =========================================================
+   LANGUAGE SELECTOR
+========================================================= */
+
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.lang-select{
+  position:relative;
+  display:flex;
+  align-items:center;
+}
+
+.lang-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  min-height:42px;
+  padding:0 13px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:rgba(255,255,255,.92);
+  color:var(--ink);
+  box-shadow:0 8px 24px rgba(13,19,36,.07);
+  cursor:pointer;
+  font-family:inherit;
+  font-size:13px;
+  font-weight:900;
+  transition:
+    background .18s ease,
+    border-color .18s ease,
+    transform .18s ease,
+    box-shadow .18s ease;
+}
+
+.lang-btn:hover{
+  background:#fff;
+  border-color:#c8d4e8;
+  transform:translateY(-1px);
+  box-shadow:0 12px 30px rgba(13,19,36,.11);
+}
+
+.lang-btn:focus-visible{
+  outline:3px solid rgba(45,85,255,.22);
+  outline-offset:2px;
+}
+
+.lang-menu{
+  position:absolute;
+  top:calc(100% + 10px);
+  right:0;
+  z-index:200;
+
+  display:none;
+
+  width:230px;
+  max-height:360px;
+  overflow-y:auto;
+
+  padding:8px;
+
+  background:rgba(255,255,255,.98);
+  border:1px solid rgba(199,212,234,.9);
+  border-radius:18px;
+
+  box-shadow:
+    0 24px 70px rgba(13,19,36,.18),
+    0 4px 14px rgba(13,19,36,.06);
+
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+}
+
+.lang-menu.open{
+  display:flex;
+  flex-direction:column;
+}
+
+.lang-menu button{
+  width:100%;
+  min-height:40px;
+
+  padding:9px 12px;
+
+  border:0;
+  border-radius:11px;
+
+  background:transparent;
+  color:#33415f;
+
+  text-align:left;
+  font-family:inherit;
+  font-size:13px;
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:
+    background .15s ease,
+    color .15s ease;
+}
+
+.lang-menu button:hover{
+  background:#f1f4fb;
+  color:var(--blue);
+}
+
+.lang-menu button.active{
+  background:rgba(45,85,255,.09);
+  color:var(--blue);
+  font-weight:900;
+}
+
+/* Custom scrollbar */
+.lang-menu::-webkit-scrollbar{
+  width:7px;
+}
+
+.lang-menu::-webkit-scrollbar-track{
+  background:transparent;
+}
+
+.lang-menu::-webkit-scrollbar-thumb{
+  background:#cbd6e8;
+  border-radius:999px;
+}
+
+/* Mobile */
+@media(max-width:620px){
+
+  .lang-btn{
+    min-height:40px;
+    padding:0 11px;
+    border-radius:13px;
+  }
+
+  .lang-menu{
+    position:fixed;
+    top:62px;
+    right:10px;
+    left:10px;
+
+    width:auto;
+    max-height:calc(100vh - 82px);
+
+    border-radius:18px;
+  }
+
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:48px;
+  padding:0 20px;
+  border-radius:17px;
+  border:0;
+  cursor:pointer;
+  font-weight:900;
+  font-size:15px;
+  letter-spacing:-.02em;
+  transition:transform .18s ease,box-shadow .18s ease
+}
+
+.btn:hover{
+  transform:translateY(-2px)
+}
+
+.btn-primary{
+  background:linear-gradient(135deg,var(--lime),var(--lime2));
+  color:#101707;
+  box-shadow:0 14px 34px rgba(182,242,58,.3)
+}
+
+.btn-secondary{
+  background:#fff;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow)
+}
+
+.hero{
+  padding:28px 0 10px
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(340px,.95fr);
+  gap:18px
+}
+
+.card{
+  background:rgba(255,255,255,.88);
+  border:1px solid rgba(199,212,234,.75);
+  box-shadow:var(--shadow);
+  border-radius:30px
+}
+
+.hero-copy{
+  padding:34px;
+  position:relative;
+  overflow:hidden
+}
+
+.hero-copy:after{
+  content:'';
+  position:absolute;
+  right:-70px;
+  bottom:-90px;
+  width:240px;
+  height:240px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(45,85,255,.16),transparent 70%)
+}
+
+.badge{
+  display:inline-flex;
+  gap:9px;
+  align-items:center;
+  padding:8px 13px;
+  border-radius:999px;
+  background:rgba(45,85,255,.08);
+  border:1px solid rgba(45,85,255,.15);
+  color:var(--blue);
+  font-size:12px;
+  font-weight:800
+}
+
+.badge:before{
+  content:'';
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--blue);
+  box-shadow:0 0 0 5px rgba(45,85,255,.11)
+}
+
+h1{
+  font-family:'Space Grotesk','Inter',sans-serif;
+  font-size:clamp(36px,5.5vw,72px);
+  line-height:.94;
+  letter-spacing:-.055em;
+  margin:16px 0 14px
+}
+
+h1 span{
+  background:linear-gradient(90deg,var(--blue),var(--violet));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent
+}
+
+.sub{
+  font-size:clamp(16px,2vw,19px);
+  line-height:1.55;
+  color:#55627d;
+  max-width:660px;
+  margin:0 0 22px
+}
+
+.cta-row{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:18px
+}
+
+.mini-row{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px
+}
+
+.mini{
+  padding:13px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.68);
+  border-radius:16px
+}
+
+.mini b{
+  display:block;
+  font-size:14px;
+  margin-bottom:4px
+}
+
+.mini span{
+  display:block;
+  font-size:12px;
+  color:var(--muted);
+  line-height:1.35
+}
+
+.hero-phone{
+  padding:16px;
+  background:linear-gradient(145deg,#0c1224,#161f39 55%,#202d52);
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 34px 90px rgba(10,16,32,.25);
+  position:relative;
+  overflow:hidden
+}
+
+.phone{
+  max-width:350px;
+  margin:0 auto;
+  background:linear-gradient(180deg,#0f1830,#10192d);
+  border-radius:30px;
+  padding:12px;
+  border:1px solid rgba(255,255,255,.08)
+}
+
+.phone-top{
+  width:94px;
+  height:20px;
+  background:#090f1d;
+  border-radius:999px;
+  margin:0 auto 12px
+}
+
+.screen{
+  background:linear-gradient(180deg,#101a34,#0e162c);
+  border-radius:22px;
+  padding:14px;
+  overflow:hidden
+}
+
+.screen-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  color:#fff;
+  margin-bottom:12px
+}
+
+.screen-head strong{
+  font-size:16px
+}
+
+.screen-head span{
+  font-size:12px;
+  color:#96a3c5;
+  font-weight:700
+}
+
+.hero-img{
+  position:relative;
+  border-radius:20px;
+  overflow:hidden;
+  margin-bottom:10px
+}
+
+.hero-img img{
+  height:170px;
+  width:100%;
+  object-fit:cover
+}
+
+.hero-img div{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(12,18,38,.84),rgba(12,18,38,.2));
+  color:#fff;
+  padding:16px
+}
+
+.hero-img small{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.16);
+  font-size:11px;
+  font-weight:800;
+  margin-bottom:10px
+}
+
+.hero-img h3{
+  font-size:22px;
+  line-height:1;
+  margin:0 0 8px;
+  max-width:180px
+}
+
+.hero-img p{
+  font-size:12px;
+  line-height:1.35;
+  max-width:180px;
+  margin:0;
+  color:rgba(255,255,255,.85)
+}
+
+.tabs{
+  display:flex;
+  gap:8px;
+  overflow:auto;
+  padding-bottom:5px;
+  margin-bottom:10px
+}
+
+.tabs span{
+  padding:8px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.06);
+  white-space:nowrap;
+  color:#c5cfeb;
+  font-size:12px;
+  font-weight:800;
+  border:1px solid rgba(255,255,255,.08)
+}
+
+.tabs .active{
+  background:#fff;
+  color:#0d1324
+}
+
+.thumb-row{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px
+}
+
+.thumb{
+  position:relative;
+  border-radius:16px;
+  overflow:hidden;
+  min-height:102px
+}
+
+.thumb img{
+  width:100%;
+  height:102px;
+  object-fit:cover
+}
+
+.thumb:after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,transparent,rgba(0,0,0,.72))
+}
+
+.thumb b,
+.thumb span{
+  position:absolute;
+  left:10px;
+  right:10px;
+  z-index:1;
+  color:#fff
+}
+
+.thumb b{
+  bottom:26px;
+  font-size:12px
+}
+
+.thumb span{
+  bottom:10px;
+  font-size:10px;
+  color:rgba(255,255,255,.8)
+}
+
+.compact-stats{
+  padding:10px 0
+}
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:10px
+}
+
+.stat{
+  padding:18px
+}
+
+.stat b{
+  display:block;
+  font-size:28px;
+  line-height:1;
+  letter-spacing:-.05em
+}
+
+.stat span{
+  display:block;
+  margin-top:6px;
+  font-size:12px;
+  color:var(--muted);
+  font-weight:800
+}
+
+.section{
+  padding:14px 0
+}
+
+.section-head{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom:12px
+}
+
+.section-head h2{
+  font-family:'Space Grotesk','Inter',sans-serif;
+  font-size:clamp(28px,4vw,48px);
+  line-height:.95;
+  letter-spacing:-.05em;
+  margin:0
+}
+
+.section-head p{
+  max-width:560px;
+  color:#5d6a85;
+  font-size:15px;
+  line-height:1.55;
+  margin:0
+}
+
+.carousel{
+  display:flex;
+  gap:14px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  padding:2px 0 16px;
+  margin:0 -16px 0 0;
+  scrollbar-width:thin
+}
+
+.carousel::-webkit-scrollbar{
+  height:8px
+}
+
+.carousel::-webkit-scrollbar-thumb{
+  background:#c9d5eb;
+  border-radius:999px
+}
+
+.slide{
+  flex:0 0 352px;
+  scroll-snap-align:start;
+  overflow:hidden
+}
+
+.slide.wide{
+  flex-basis:520px
+}
+
+.slide img{
+  width:100%;
+  height:172px;
+  object-fit:cover
+}
+
+.slide-body{
+  padding:18px
+}
+
+.kicker{
+  display:inline-flex;
+  padding:7px 11px;
+  border-radius:999px;
+  background:rgba(45,85,255,.08);
+  color:var(--blue);
+  font-size:12px;
+  font-weight:900;
+  margin-bottom:10px
+}
+
+.slide h3{
+  margin:0 0 8px;
+  font-size:24px;
+  letter-spacing:-.035em
+}
+
+.slide p{
+  margin:0 0 14px;
+  color:#5d6a85;
+  font-size:14px;
+  line-height:1.55
+}
+
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px
+}
+
+.tags span{
+  font-size:11px;
+  font-weight:800;
+  padding:7px 9px;
+  border-radius:999px;
+  background:#f1f4fb;
+  color:#3b4b6a;
+  border:1px solid var(--line)
+}
+
+.info-strip{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:14px
+}
+
+.dark-card{
+  color:#fff;
+  background:
+    linear-gradient(90deg,rgba(13,16,36,.92),rgba(13,16,36,.62),rgba(13,16,36,.88)),
+    url('images/movies_placeholder.png') center/cover no-repeat;
+  border-radius:30px;
+  padding:28px;
+  min-height:300px;
+  box-shadow:var(--shadow-lg)
+}
+
+.dark-card h2{
+  font-family:'Space Grotesk','Inter',sans-serif;
+  font-size:clamp(30px,4vw,52px);
+  line-height:.95;
+  letter-spacing:-.05em;
+  margin:12px 0
+}
+
+.dark-card p{
+  color:rgba(255,255,255,.82);
+  font-size:15px;
+  line-height:1.6;
+  max-width:560px
+}
+
+.media-mini{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:8px;
+  margin-top:18px
+}
+
+.media-mini img{
+  height:76px;
+  width:100%;
+  object-fit:cover;
+  border-radius:15px;
+  border:1px solid rgba(255,255,255,.12)
+}
+
+.side-list{
+  display:grid;
+  gap:10px
+}
+
+.side-item{
+  padding:18px;
+  text-decoration:none;
+  color:inherit;
+  display:block
+}
+
+.side-item h3{
+  margin:0 0 6px;
+  font-size:21px;
+  letter-spacing:-.03em
+}
+
+.side-item p{
+  margin:0;
+  color:#5d6a85;
+  font-size:14px;
+  line-height:1.5
+}
+
+.steps{
+  display:flex;
+  gap:12px;
+  overflow:auto;
+  padding-bottom:12px
+}
+
+.step{
+  flex:0 0 220px;
+  padding:18px
+}
+
+.num{
+  display:inline-grid;
+  place-items:center;
+  width:38px;
+  height:38px;
+  border-radius:13px;
+  background:linear-gradient(135deg,var(--blue),var(--violet));
+  color:#fff;
+  font-weight:900;
+  margin-bottom:12px
+}
+
+.step h3{
+  margin:0 0 8px;
+  font-size:19px
+}
+
+.step p{
+  margin:0;
+  color:#5d6a85;
+  font-size:13px;
+  line-height:1.45
+}
+
+.final{
+  padding:18px 0 90px
+}
+
+.final-card{
+  background:linear-gradient(145deg,#2d55ff,#0f7bff 50%,#1b2454);
+  color:#fff;
+  border-radius:30px;
+  padding:28px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:18px;
+  align-items:center;
+  box-shadow:0 28px 80px rgba(45,85,255,.28)
+}
+
+.final-card h2{
+  font-family:'Space Grotesk','Inter',sans-serif;
+  font-size:clamp(30px,4.4vw,50px);
+  line-height:.95;
+  letter-spacing:-.05em;
+  margin:0 0 10px
+}
+
+.final-card p{
+  max-width:620px;
+  color:rgba(255,255,255,.86);
+  font-size:15px;
+  line-height:1.55;
+  margin:0
+}
+
+.final-mini{
+  display:flex;
+  gap:8px;
+  justify-content:flex-end;
+  margin-bottom:12px
+}
+
+.final-mini img{
+  width:66px;
+  height:90px;
+  object-fit:cover;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.18)
+}
+
+.mobile-bar{
+  display:none;
+  position:fixed;
+  left:12px;
+  right:12px;
+  bottom:12px;
+  z-index:90;
+  background:rgba(11,16,32,.95);
+  backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:22px;
+  padding:10px;
+  box-shadow:0 20px 50px rgba(0,0,0,.26)
+}
+
+.mobile-bar .btn{
+  width:100%
+}
+
+footer{
+  padding:0 0 86px;
+  color:#7a859d;
+  font-size:13px
+}
+
+.reveal{
+  opacity:0;
+  transform:translateY(16px);
+  transition:opacity .55s ease,transform .55s ease
+}
+
+.reveal.show{
+  opacity:1;
+  transform:none
+}
+
+.poster-carousel{
+  display:flex;
+  gap:12px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  padding:2px 0 16px;
+  margin-right:-16px;
+  scrollbar-width:thin
+}
+
+.poster-carousel::-webkit-scrollbar{
+  height:8px
+}
+
+.poster-carousel::-webkit-scrollbar-thumb{
+  background:#c9d5eb;
+  border-radius:999px
+}
+
+.poster-card{
+  position:relative;
+  flex:0 0 178px;
+  height:252px;
+  border-radius:22px;
+  overflow:hidden;
+  scroll-snap-align:start;
+  box-shadow:var(--shadow);
+  border:1px solid rgba(199,212,234,.72);
+  background:#101827;
+  transition:transform .18s ease,box-shadow .18s ease
+}
+
+.poster-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 22px 60px rgba(13,19,36,.16)
+}
+
+.poster-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover
+}
+
+.poster-card:after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,0) 44%,rgba(0,0,0,.84) 100%)
+}
+
+.poster-meta{
+  position:absolute;
+  left:12px;
+  right:12px;
+  bottom:12px;
+  z-index:1;
+  color:#fff
+}
+
+.poster-meta strong{
+  display:block;
+  font-size:15px;
+  line-height:1.12;
+  letter-spacing:-.03em
+}
+
+.poster-meta span{
+  display:block;
+  font-size:11px;
+  color:rgba(255,255,255,.78);
+  margin-top:4px
+}
+
+.slide{
+  cursor:pointer
+}
+
+.slide:hover{
+  transform:translateY(-2px);
+  box-shadow:0 20px 55px rgba(13,19,36,.12)
+}
+
+.movie-section-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  gap:14px
+}
+
+@media(max-width:620px){
+  .poster-card{
+    flex-basis:142px;
+    height:204px
+  }
+
+  .poster-meta strong{
+    font-size:13px
+  }
+
+  .poster-meta span{
+    font-size:10px
+  }
+
+  .poster-carousel{
+    margin-right:-10px
+  }
+}
+
+@media(max-width:980px){
+  .hero-grid,
+  .info-strip,
+  .final-card{
+    grid-template-columns:1fr
+  }
+
+  .nav-links{
+    display:none
+  }
+
+  .stats-grid{
+    grid-template-columns:repeat(2,1fr)
+  }
+
+  .slide{
+    flex-basis:310px
+  }
+
+  .slide.wide{
+    flex-basis:360px
+  }
+
+  .final-mini{
+    justify-content:flex-start
+  }
+}
+
+@media(max-width:620px){
+  .wrap{
+    width:min(100% - 20px,1200px)
+  }
+
+  .brand img{
+    width:42px;
+    height:32px
+  }
+
+  .brand strong{
+    font-size:18px
+  }
+
+  .nav-in{
+    padding:10px 0
+  }
+
+  .nav-right .btn{
+    display:none
+  }
+
+  .hero{
+    padding-top:18px
+  }
+
+  .hero-copy{
+    padding:22px;
+    border-radius:26px
+  }
+
+  .mini-row{
+    grid-template-columns:1fr
+  }
+
+  .hero-phone{
+    padding:12px;
+    border-radius:26px
+  }
+
+  .thumb-row{
+    grid-template-columns:repeat(2,1fr)
+  }
+
+  .stats-grid{
+    grid-template-columns:repeat(2,1fr)
+  }
+
+  .section-head{
+    display:block
+  }
+
+  .section-head p{
+    margin-top:8px
+  }
+
+  .carousel{
+    margin-right:-10px
+  }
+
+  .slide,
+  .slide.wide{
+    flex-basis:282px
+  }
+
+  .slide img{
+    height:150px
+  }
+
+  .dark-card{
+    padding:22px
+  }
+
+  .media-mini{
+    grid-template-columns:repeat(3,1fr)
+  }
+
+  .mobile-bar{
+    display:block
+  }
+
+  .final-card{
+    padding:22px
+  }
+
+  .final-mini img{
+    width:56px;
+    height:78px
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav class="nav">
+    <div class="wrap nav-in">
+
+        <a class="brand" href="#top">
+           <img src="images/logo_icon.svg" alt="LOOMITV">
+            <strong>
+    LOOMITV</strong>
+
+        </a>
+
+        <div class="nav-links">
+            <a href="#categories" data-i18n="nav_categories">Categories</a>
+            <a href="#movies" data-i18n="nav_movies">Movies</a>
+            <a href="#series" data-i18n="nav_series">Series</a>
+            <a href="#install" data-i18n="nav_install">Install</a>
+        </div>
+
+        <div class="nav-right">
+
+            <div class="lang-select">
+
+                <button type="button" class="lang-btn" id="langBtn" aria-label="Select language" data-i18n-aria="language_select">
+                    ЁЯМР
+                    <span id="langBtnLabel">EN</span>
+                </button>
+
+                <div class="lang-menu" id="langMenu" role="menu"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+</nav>
+
+
+<main id="top">
+
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
+
+    <section class="hero">
+
+        <div class="wrap hero-grid">
+
+            <div class="hero-copy card reveal">
+
+                <div class="badge" data-i18n="hero_badge">
+                    Direct download for Android
+                </div>
+
+                <h1>
+                    <span data-i18n="hero_title">
+                        Movies, series and football
+                    </span>
+                    <span data-i18n="hero_title_highlight">
+                        without ads
+                    </span>.
+                </h1>
+
+                <p class="sub" data-i18n="hero_description">
+                    An international app to watch movies, football,
+                    sports events, series, global TV channels and
+                    short-form shows. Install the APK and get started
+                    in seconds.
+                </p>
+
+                <div class="cta-row">
+
+                    <a href="download.php" data-download="apk" class="btn btn-primary" data-i18n="download_app">
+                        Download App
+                    </a>
+
+                    <a href="#categories" class="btn btn-secondary" data-i18n="browse_content">
+                        Browse Content
+                    </a>
+
+                </div>
+
+                <div class="mini-row">
+
+                    <div class="mini">
+                        <b data-i18n="mini_free_title">Free</b>
+                        <span data-i18n="mini_free_text">
+                            No monthly subscription.
+                        </span>
+                    </div>
+
+                    <div class="mini">
+                        <b data-i18n="mini_ads_title">No Ads</b>
+                        <span data-i18n="mini_ads_text">
+                            Fewer interruptions, more content.
+                        </span>
+                    </div>
+
+                    <div class="mini">
+                        <b data-i18n="mini_all_title">All-in-One</b>
+                        <span data-i18n="mini_all_text">
+                            Sports, movies, TV and shows.
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+                 PHONE PREVIEW
+            ====================================================== -->
+
+            <div class="hero-phone card reveal">
+
+                <div class="phone">
+
+                    <div class="phone-top"></div>
+
+                    <div class="screen">
+
+                        <div class="screen-head">
+                           <strong>
+    LOOMITV</strong>
+
+                            <span data-i18n="phone_home">Home</span>
+                        </div>
+
+                        <div class="hero-img">
+
+                            <img src="images/football_placeholder.png" alt="Football" data-i18n-alt="alt_football">
+
+                            <div>
+
+                                <small data-i18n="featured">
+                                    Featured
+                                </small>
+
+                                <h3 data-i18n="phone_featured_title">
+                                    Football, movies and global TV
+                                </h3>
+
+                                <p data-i18n="phone_featured_text">
+                                    Explore live and on-demand content
+                                    from one single app.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="tabs">
+
+                            <span class="active" data-i18n="tab_all">
+                                All
+                            </span>
+
+                            <span data-i18n="tab_football">
+                                Football
+                            </span>
+
+                            <span data-i18n="tab_movies">
+                                Movies
+                            </span>
+
+                            <span data-i18n="tab_sports">
+                                Sports
+                            </span>
+
+                            <span data-i18n="tab_tv">
+                                TV
+                            </span>
+
+                            <span data-i18n="tab_shows">
+                                Shows
+                            </span>
+
+                        </div>
+
+                        <div class="thumb-row">
+
+                            <div class="thumb">
+
+                                <img src="images/wide_iron_man.jpg" alt="Iron Man" data-i18n-alt="alt_iron_man">
+
+                                <b>Iron Man</b>
+
+                                <span data-i18n="content_movie">
+                                    Movie
+                                </span>
+
+                            </div>
+
+
+                            <div class="thumb">
+
+                                <img src="images/breaking_news_placeholder.png" alt="News" data-i18n-alt="alt_news">
+
+                                <b data-i18n="news">
+                                    News
+                                </b>
+
+                                <span data-i18n="content_live">
+                                    Live
+                                </span>
+
+                            </div>
+
+
+                            <div class="thumb">
+
+                                <img src="images/wide_breaking_bad_series.jpg" alt="Breaking Bad" data-i18n-alt="alt_breaking_bad">
+
+                                <b>Breaking Bad</b>
+
+                                <span data-i18n="content_series">
+                                    Series
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         STATS
+    ========================================================== -->
+
+    <section class="compact-stats">
+
+        <div class="wrap stats-grid reveal">
+
+            <div class="stat card">
+                <b>24/7</b>
+                <span data-i18n="stat_content">
+                    Content available
+                </span>
+            </div>
+
+            <div class="stat card">
+                <b>HD / 4K</b>
+                <span data-i18n="stat_quality">
+                    Adaptive quality
+                </span>
+            </div>
+
+            <div class="stat card">
+                <b>APK</b>
+                <span data-i18n="stat_installation">
+                    Direct installation
+                </span>
+            </div>
+
+            <div class="stat card">
+                <b>0 Ads</b>
+                <span data-i18n="stat_ads">
+                    Clean experience
+                </span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         CATEGORIES
+    ========================================================== -->
+
+    <section class="section" id="categories">
+
+        <div class="wrap">
+
+            <div class="section-head reveal">
+
+                <h2 data-i18n="categories_title">
+                    Categories
+                </h2>
+
+                <p data-i18n="categories_description">
+                    Swipe right and explore all the content
+                    available in the app.
+                </p>
+
+            </div>
+
+
+            <div class="carousel reveal">
+
+                <!-- FOOTBALL -->
+
+                <a href="#categories" class="slide card">
+
+                    <img src="images/football_placeholder.png" alt="Football" data-i18n-alt="alt_football">
+
+                    <div class="slide-body">
+
+                        <span class="kicker" data-i18n="category_football">
+                            Football
+                        </span>
+
+                        <h3 data-i18n="football_title">
+                            Live Football
+                        </h3>
+
+                        <p data-i18n="football_description">
+                            Leagues, featured matches, previews
+                            and highlights.
+                        </p>
+
+                        <div class="tags">
+                            <span data-i18n="tag_leagues">Leagues</span>
+                            <span data-i18n="tag_live_matches">Live Matches</span>
+                            <span data-i18n="tag_highlights">Highlights</span>
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+                <!-- SPORTS -->
+
+                <a href="#categories" class="slide card">
+
+                    <img src="images/sports_events_placeholder.png" alt="Sports events" data-i18n-alt="alt_sports_events">
+
+                    <div class="slide-body">
+
+                        <span class="kicker" data-i18n="category_sports_events">
+                            Sports Events
+                        </span>
+
+                        <h3 data-i18n="sports_events_title">
+                            Sports Events
+                        </h3>
+
+                        <p data-i18n="sports_events_description">
+                            PPV, fights, races, tournaments
+                            and major events.
+                        </p>
+
+                        <div class="tags">
+                            <span data-i18n="tag_ppv">PPV</span>
+                            <span data-i18n="tag_fights">Fights</span>
+                            <span data-i18n="tag_events">Events</span>
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+                <!-- MOVIES -->
+
+                <a href="#movies" class="slide card">
+
+                    <img src="images/movies_placeholder.png" alt="Movies" data-i18n-alt="alt_movies">
+
+                    <div class="slide-body">
+
+                        <span class="kicker" data-i18n="category_movies">
+                            Movies
+                        </span>
+
+                        <h3 data-i18n="movies_category_title">
+                            Movies
+                        </h3>
+
+                        <p data-i18n="movies_category_description">
+                            New releases, action, drama, horror
+                            and a general library.
+                        </p>
+
+                        <div class="tags">
+                            <span data-i18n="tag_new_releases">
+                                New Releases
+                            </span>
+                            <span data-i18n="tag_action">
+                                Action
+                            </span>
+                            <span data-i18n="tag_drama">
+                                Drama
+                            </span>
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+                <!-- GLOBAL TV -->
+
+                <a href="#categories" class="slide card">
+
+                    <img src="images/global_tv_channels_placeholder.png" alt="Global TV channels" data-i18n-alt="alt_global_tv">
+
+                    <div class="slide-body">
+
+                        <span class="kicker" data-i18n="category_global_tv">
+                            Global TV Channels
+                        </span>
+
+                        <h3 data-i18n="global_tv_title">
+                            Global Channels
+                        </h3>
+
+                        <p data-i18n="global_tv_description">
+                            News, entertainment, kids and live
+                            TV channels.
+                        </p>
+
+                        <div class="tags">
+                            <span data-i18n="tag_news">News</span>
+                            <span data-i18n="tag_live_tv">Live TV</span>
+                            <span data-i18n="tag_kids">Kids</span>
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+                <!-- NEWS -->
+
+                <a href="#categories" class="slide card">
+
+                    <img src="images/breaking_news_placeholder.png" alt="Breaking news" data-i18n-alt="alt_breaking_news">
+
+                    <div class="slide-body">
+
+                        <span class="kicker" data-i18n="category_live_news">
+                            Live News
+                        </span>
+
+                        <h3 data-i18n="live_news_title">
+                            Live News
+                        </h3>
+
+                        <p data-i18n="live_news_description">
+                            A visual section for news channels,
+                            breaking news and international TV.
+                        </p>
+
+                        <div class="tags">
+                            <span data-i18n="tag_breaking">
+                                Breaking
+                            </span>
+                            <span data-i18n="tag_news">
+                                News
+                            </span>
+                            <span data-i18n="tag_live">
+                                Live
+                            </span>
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+                <!-- SHORTFORM -->
+
+                <a href="#series" class="slide card">
+
+                    <img src="images/shortform_shows_placeholder.png" alt="Short-form shows" data-i18n-alt="alt_shortform">
+
+                    <div class="slide-body">
+
+                        <span class="kicker" data-i18n="category_shortform">
+                            Shortform Shows
+                        </span>
+
+                        <h3 data-i18n="shortform_title">
+                            Short Shows
+                        </h3>
+
+                        <p data-i18n="shortform_description">
+                            Clips, miniseries and quick episodes
+                            designed for mobile.
+                        </p>
+
+                        <div class="tags">
+                            <span data-i18n="tag_clips">Clips</span>
+                            <span data-i18n="tag_miniseries">
+                                Mini Series
+                            </span>
+                            <span data-i18n="tag_episodes">
+                                Episodes
+                            </span>
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         MOVIES
+    ========================================================== -->
+
+    <section class="section" id="movies">
+
+        <div class="wrap">
+
+            <div class="section-head reveal">
+
+                <h2 data-i18n="popular_movies_title">
+                    Popular Movies
+                </h2>
+
+                <p data-i18n="popular_movies_description">
+                    Action, superheroes, drama and popular classics
+                    in a library ready to enjoy.
+                </p>
+
+            </div>
+
+
+            <div class="poster-carousel reveal">
+
+                <a href="download.php" data-download="apk" class="poster-card">
+                    <img src="images/equalizer.jpg" alt="The Equalizer">
+                    <div class="poster-meta">
+                        <strong>The Equalizer</strong>
+                        <span data-i18n="genre_action_thriller">
+                            Action ┬╖ Thriller
+                        </span>
+                    </div>
+                </a>
+
+
+                <a href="download.php" data-download="apk" class="poster-card">
+                    <img src="images/avengers_endgame.jpg" alt="Avengers: Endgame">
+                    <div class="poster-meta">
+                        <strong>Avengers: Endgame</strong>
+                        <span data-i18n="genre_superheroes_scifi">
+                            Superheroes ┬╖ Sci-Fi
+                        </span>
+                    </div>
+                </a>
+
+
+                <a href="download.php" data-download="apk" class="poster-card">
+                    <img src="images/spiderman_brand_new_day.jpg" alt="Spider-Man: Brand New Day">
+                    <div class="poster-meta">
+                        <strong>Spider-Man: Brand New Day</strong>
+                        <span data-i18n="genre_superheroes_action">
+                            Superheroes ┬╖ Action
+                        </span>
+                    </div>
+                </a>
+
+
+                <a href="download.php" data-download="apk" class="poster-card">
+                    <img src="images/green_mile.jpg" alt="The Green Mile">
+                    <div class="poster-meta">
+                        <strong>The Green Mile</strong>
+                        <span data-i18n="genre_drama_classic">
+                            Drama ┬╖ Classic
+                        </span>
+                    </div>
+                </a>
+
+
+                <a href="download.php" data-download="apk" class="poster-card">
+                    <img src="images/iron_man.jpg" alt="Iron Man">
+                    <div class="poster-meta">
+                        <strong>Iron Man</strong>
+                        <span data-i18n="genre_superheroes_action">
+                            Superheroes ┬╖ Action
+                        </span>
+                    </div>
+                </a>
+
+
+                <a href="download.php" data-download="apk" class="poster-card">
+                    <img src="images/ghost_rider.jpg" alt="Ghost Rider">
+                    <div class="poster-meta">
+                        <strong>Ghost Rider</strong>
+                        <span data-i18n="genre_action_fantasy">
+                            Action ┬╖ Fantasy
+                        </span>
+                    </div>
+                </a>
+
+
+                <a href="download.php" data-download="apk" class="poster-card">
+                    <img src="images/aquaman.jpg" alt="Aquaman">
+                    <div class="poster-meta">
+                        <strong>Aquaman</strong>
+                        <span data-i18n="genre_adventure_fantasy">
+                            Adventure ┬╖ Fantasy
+                        </span>
+                    </div>
+                </a>
+
+
+                <a href="download.php" data-download="apk" class="poster-card">
+                    <img src="images/top_gun_maverick.jpg" alt="Top Gun: Maverick">
+                    <div class="poster-meta">
+                        <strong>Top Gun: Maverick</strong>
+                        <span data-i18n="genre_action_drama">
+                            Action ┬╖ Drama
+                        </span>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         SERIES
+    ========================================================== -->
+
+    <section class="section" id="series">
+
+        <div class="wrap">
+
+            <div class="section-head reveal">
+
+                <h2 data-i18n="featured_series_title">
+                    Featured Series
+                </h2>
+
+                <p data-i18n="featured_series_description">
+                    Popular series to watch whenever you want,
+                    without ads and from one single app.
+                </p>
+
+            </div>
+
+
+            <div class="poster-carousel reveal">
+
+                <a href="download.php" data-download="apk" class="poster-card">
+
+                    <img src="images/breaking_bad_series.jpg" alt="Breaking Bad">
+
+                    <div class="poster-meta">
+                        <strong>Breaking Bad</strong>
+                        <span data-i18n="genre_series_crime_drama">
+                            Series ┬╖ Crime Drama
+                        </span>
+                    </div>
+
+                </a>
+
+
+                <a href="download.php" data-download="apk" class="poster-card">
+
+                    <img src="images/from_series.jpg" alt="From">
+
+                    <div class="poster-meta">
+                        <strong>From</strong>
+                        <span data-i18n="genre_series_mystery">
+                            Series ┬╖ Mystery
+                        </span>
+                    </div>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         BENEFITS
+    ========================================================== -->
+
+    <section class="section" id="benefits">
+
+        <div class="wrap info-strip">
+
+            <div class="dark-card reveal">
+
+                <div class="badge" style="background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.18);color:#fff" data-i18n="all_in_one">
+                    All-in-One App
+                </div>
+
+                <h2 data-i18n="benefits_title">
+                    Entertainment for every moment.
+                </h2>
+
+                <p data-i18n="benefits_description">
+                    Live football, sports events, popular movies,
+                    featured series, global channels and short-form
+                    shows in a fast, ad-free experience.
+                </p>
+
+                <div class="media-mini">
+
+                    <img src="images/wide_iron_man.jpg" alt="Iron Man">
+
+                    <img src="images/wide_breaking_bad_series.jpg" alt="Breaking Bad">
+
+                    <img src="images/wide_top_gun_maverick.jpg" alt="Top Gun: Maverick">
+
+                    <img src="images/wide_green_mile.jpg" alt="The Green Mile">
+
+                    <img src="images/global_tv_channels_placeholder.png" alt="Global TV Channels" data-i18n-alt="alt_global_tv">
+
+                    <img src="images/football_placeholder.png" alt="Football" data-i18n-alt="alt_football">
+
+                </div>
+
+            </div>
+
+
+            <div class="side-list reveal">
+
+                <a href="#movies" class="side-item card">
+
+                    <h3 data-i18n="side_movies_title">
+                        Popular Movies
+                    </h3>
+
+                    <p data-i18n="side_movies_description">
+                        Action, drama, superheroes, adventure
+                        and classics ready to watch from the app.
+                    </p>
+
+                </a>
+
+
+                <a href="#series" class="side-item card">
+
+                    <h3 data-i18n="side_series_title">
+                        Featured Series
+                    </h3>
+
+                    <p data-i18n="side_series_description">
+                        Intense stories, complete seasons and content
+                        perfect for watching on mobile.
+                    </p>
+
+                </a>
+
+
+                <a href="download.php" data-download="apk" class="side-item card">
+
+                    <h3 data-i18n="side_download_title">
+                        Direct Download
+                    </h3>
+
+                    <p data-i18n="side_download_description">
+                        Install the APK and start enjoying free content
+                        without ads.
+                    </p>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         INSTALLATION
+    ========================================================== -->
+
+    <section class="section" id="install">
+
+        <div class="wrap">
+
+            <div class="section-head reveal">
+
+                <h2 data-i18n="installation_title">
+                    Quick Installation
+                </h2>
+
+                <p data-i18n="installation_description">
+                    Download, install and start watching content
+                    in just a few seconds.
+                </p>
+
+            </div>
+
+
+            <div class="steps reveal">
+
+                <div class="step card">
+
+                    <div class="num">01</div>
+
+                    <h3 data-i18n="install_step1_title">
+                        Download
+                    </h3>
+
+                    <p data-i18n="install_step1_text">
+                        Tap the button and save the APK.
+                    </p>
+
+                </div>
+
+
+                <div class="step card">
+
+                    <div class="num">02</div>
+
+                    <h3 data-i18n="install_step2_title">
+                        Install
+                    </h3>
+
+                    <p data-i18n="install_step2_text">
+                        Open the file and allow installation.
+                    </p>
+
+                </div>
+
+
+                <div class="step card">
+
+                    <div class="num">03</div>
+
+                    <h3 data-i18n="install_step3_title">
+                        Explore
+                    </h3>
+
+                    <p data-i18n="install_step3_text">
+                        Browse football, movies, TV and shows.
+                    </p>
+
+                </div>
+
+
+                <div class="step card">
+
+                    <div class="num">04</div>
+
+                    <h3 data-i18n="install_step4_title">
+                        Enjoy
+                    </h3>
+
+                    <p data-i18n="install_step4_text">
+                        Content without ads or a subscription.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         FINAL CTA
+    ========================================================== -->
+
+    <section class="final">
+
+        <div class="wrap final-card reveal">
+
+            <div>
+
+                <h2 data-i18n="final_title">
+                    Download TV Loomi and get started today.
+                </h2>
+
+                <p data-i18n="final_description">
+                    All the entertainment you want in one app:
+                    movies, series, football, sports events
+                    and global TV.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="wrap">
+        ┬й 2026 LOOMITV    </div>
+
+</footer>
+
+
+<!-- =============================================================
+     LANGUAGE SYSTEM
+============================================================== -->
+
+<script>
+(function(){
+
+    /*
+     * ------------------------------------------------------------
+     * SUPPORTED LANGUAGES
+     * ------------------------------------------------------------
+     */
+
+    const SUPPORTED = [
+    'en',
+    'zh',
+    'hi',
+    'es',
+    'fr',
+    'ar',
+    'bn',
+    'pt',
+    'ru',
+    'ur',
+    'id',
+    'de',
+    'ja',
+    'mr',
+    'it',
+    'tr',
+    'ko',
+    'ta',
+    'vi',
+    'fa',
+    'tl',
+    'th',
+    'nl',
+    'pl',
+    'uk',
+    'ms',
+    'pa',
+    'te',
+    'gu',
+    'kn',
+    'ml',
+    'he',
+    'sv',
+    'el',
+    'cs',
+    'hu',
+    'ro',
+    'da',
+    'fi',
+    'no',
+    'sk',
+    'bg',
+    'hr',
+    'sr'
+];
+
+
+
+    /*
+     * ------------------------------------------------------------
+     * LANGUAGE NAMES
+     * ------------------------------------------------------------
+     */
+
+    const LABELS = {
+    en: 'English',
+    zh: 'Mandarin Chinese',
+    hi: 'рд╣рд┐рдиреНрджреА',
+    es: 'Espa├▒ol',
+    fr: 'Fran├зais',
+    ar: '╪з┘Д╪╣╪▒╪и┘К╪й',
+    bn: 'ржмрж╛ржВрж▓рж╛',
+    pt: 'Portugu├кs',
+    ru: '╨а╤Г╤Б╤Б╨║╨╕╨╣',
+    ur: '╪з╪▒╪п┘И',
+    id: 'Bahasa Indonesia',
+    de: 'Deutsch',
+    ja: 'цЧецЬмшкЮ',
+    mr: 'рдорд░рд╛рдареА',
+    it: 'Italiano',
+    tr: 'T├╝rk├зe',
+    ko: 'эХЬъ╡ньЦ┤',
+    ta: 'родрооро┐ро┤рпН',
+    vi: 'Tiс║┐ng Viс╗Зt',
+    fa: '┘Б╪з╪▒╪│█М',
+    tl: 'Filipino / Tagalog',
+    th: 'р╣Др╕Чр╕в',
+    nl: 'Nederlands',
+    pl: 'Polski',
+    uk: '╨г╨║╤А╨░╤Ч╨╜╤Б╤М╨║╨░',
+    ms: 'Bahasa Melayu',
+    pa: 'рикрй░риЬри╛римрйА',
+    te: 'р░др▒Жр░▓р▒Бр░Чр▒Б',
+    gu: 'ркЧрлБркЬрк░рк╛ркдрлА',
+    kn: 'р▓Хр▓ир│Нр▓ир▓б',
+    ml: 'р┤ор┤▓р┤пр┤╛р┤│р┤В',
+    he: '╫в╫С╫и╫Щ╫к',
+    sv: 'Svenska',
+    el: '╬Х╬╗╬╗╬╖╬╜╬╣╬║╬м',
+    cs: '─Мe┼бtina',
+    hu: 'Magyar',
+    ro: 'Rom├вn─Г',
+    da: 'Dansk',
+    fi: 'Suomi',
+    no: 'Norsk',
+    sk: 'Sloven─Нina',
+    bg: '╨С╤К╨╗╨│╨░╤А╤Б╨║╨╕',
+    hr: 'Hrvatski',
+    sr: '╨б╤А╨┐╤Б╨║╨╕'
+};
+
+
+    /*
+     * ------------------------------------------------------------
+     * SHORT LANGUAGE LABELS
+     * ------------------------------------------------------------
+     */
+
+    const SHORT = {
+    en: 'EN',
+    zh: 'ZH',
+    hi: 'HI',
+    es: 'ES',
+    fr: 'FR',
+    ar: 'AR',
+    bn: 'BN',
+    pt: 'PT',
+    ru: 'RU',
+    ur: 'UR',
+    id: 'ID',
+    de: 'DE',
+    ja: 'JA',
+    mr: 'MR',
+    it: 'IT',
+    tr: 'TR',
+    ko: 'KO',
+    ta: 'TA',
+    vi: 'VI',
+    fa: 'FA',
+    tl: 'TL',
+    th: 'TH',
+    nl: 'NL',
+    pl: 'PL',
+    uk: 'UK',
+    ms: 'MS',
+    pa: 'PA',
+    te: 'TE',
+    gu: 'GU',
+    kn: 'KN',
+    ml: 'ML',
+    he: 'HE',
+    sv: 'SV',
+    el: 'EL',
+    cs: 'CS',
+    hu: 'HU',
+    ro: 'RO',
+    da: 'DA',
+    fi: 'FI',
+    no: 'NO',
+    sk: 'SK',
+    bg: 'BG',
+    hr: 'HR',
+    sr: 'SR'
+};
+
+
+
+    /*
+     * ------------------------------------------------------------
+     * RTL LANGUAGES
+     * ------------------------------------------------------------
+     */
+
+    const RTL_LANGUAGES = [
+        'ar',
+        'he',
+        'fa',
+        'ur'
+    ];
+
+
+    /*
+     * ------------------------------------------------------------
+     * ELEMENTS
+     * ------------------------------------------------------------
+     */
+
+    const menu = document.getElementById('langMenu');
+    const btn = document.getElementById('langBtn');
+    const btnLabel = document.getElementById('langBtnLabel');
+
+
+    /*
+     * ------------------------------------------------------------
+     * BUILD LANGUAGE MENU
+     * ------------------------------------------------------------
+     */
+
+    SUPPORTED.forEach(function(code){
+
+        const button = document.createElement('button');
+
+        button.type = 'button';
+        button.textContent = LABELS[code];
+        button.dataset.code = code;
+        button.setAttribute('role', 'menuitem');
+
+        button.addEventListener('click', function(){
+
+            loadLanguage(code);
+
+            menu.classList.remove('open');
+
+        });
+
+        menu.appendChild(button);
+
+    });
+
+
+    /*
+     * ------------------------------------------------------------
+     * LANGUAGE MENU OPEN/CLOSE
+     * ------------------------------------------------------------
+     */
+
+    btn.addEventListener('click', function(){
+
+        menu.classList.toggle('open');
+
+    });
+
+
+    document.addEventListener('click', function(event){
+
+        if(!event.target.closest('.lang-select')){
+
+            menu.classList.remove('open');
+
+        }
+
+    });
+
+
+    /*
+     * ------------------------------------------------------------
+     * APPLY TRANSLATIONS
+     * ------------------------------------------------------------
+     */
+
+    function applyTranslations(){
+
+        /*
+         * Normal text.
+         */
+
+        document
+            .querySelectorAll('[data-i18n]')
+            .forEach(function(element){
+
+                const key = element.getAttribute('data-i18n');
+
+                if(
+                    Object.prototype.hasOwnProperty.call(current, key)
+                ){
+
+                    element.textContent = current[key];
+
+                }
+
+            });
+
+
+        /*
+         * Document title.
+         */
+
+        if(current.meta_title){
+
+            document.title = current.meta_title;
+
+        }
+
+
+        /*
+         * Meta description.
+         */
+
+        const metaDescription =
+            document.querySelector('meta[name="description"]');
+
+        if(
+            metaDescription &&
+            current.meta_description
+        ){
+
+            metaDescription.setAttribute(
+                'content',
+                current.meta_description
+            );
+
+        }
+
+
+        /*
+         * Image alt attributes.
+         */
+
+        document
+            .querySelectorAll('[data-i18n-alt]')
+            .forEach(function(element){
+
+                const key =
+                    element.getAttribute('data-i18n-alt');
+
+                if(
+                    Object.prototype.hasOwnProperty.call(current, key)
+                ){
+
+                    element.setAttribute(
+                        'alt',
+                        current[key]
+                    );
+
+                }
+
+            });
+
+
+        /*
+         * ARIA labels.
+         */
+
+        document
+            .querySelectorAll('[data-i18n-aria]')
+            .forEach(function(element){
+
+                const key =
+                    element.getAttribute('data-i18n-aria');
+
+                if(
+                    Object.prototype.hasOwnProperty.call(current, key)
+                ){
+
+                    element.setAttribute(
+                        'aria-label',
+                        current[key]
+                    );
+
+                }
+
+            });
+
+    }
+
+
+    /*
+     * ------------------------------------------------------------
+     * ACTIVE LANGUAGE
+     * ------------------------------------------------------------
+     */
+
+    function setActiveMenuItem(lang){
+
+        Array.from(menu.children).forEach(function(button){
+
+            button.classList.toggle(
+                'active',
+                button.dataset.code === lang
+            );
+
+        });
+
+        btnLabel.textContent =
+            SHORT[lang] || lang.toUpperCase();
+
+    }
+
+
+    /*
+     * ------------------------------------------------------------
+     * RTL / LTR
+     * ------------------------------------------------------------
+     */
+
+    function setDirection(lang){
+
+        if(RTL_LANGUAGES.includes(lang)){
+
+            document.documentElement.dir = 'rtl';
+
+        }else{
+
+            document.documentElement.dir = 'ltr';
+
+        }
+
+    }
+
+
+    /*
+     * ------------------------------------------------------------
+     * LOAD LANGUAGE JSON
+     * ------------------------------------------------------------
+     */
+
+    let current = {};
+
+
+    async function loadLanguage(lang){
+
+        if(!SUPPORTED.includes(lang)){
+
+            lang = 'en';
+
+        }
+
+
+        try{
+
+            const response = await fetch(
+                'locales/' + lang + '.json',
+                {
+                    cache: 'no-cache'
+                }
+            );
+
+
+            if(!response.ok){
+
+                throw new Error(
+                    'Locale file not found: ' + lang
+                );
+
+            }
+
+
+            current = await response.json();
+
+        }catch(error){
+
+            console.warn(
+                'Could not load language:',
+                lang,
+                error
+            );
+
+
+            /*
+             * Always fall back to English.
+             */
+
+            if(lang !== 'en'){
+
+                try{
+
+                    const response =
+                        await fetch(
+                            'locales/en.json',
+                            {
+                                cache: 'no-cache'
+                            }
+                        );
+
+                    current = await response.json();
+
+                    lang = 'en';
+
+                }catch(fallbackError){
+
+                    console.error(
+                        'Could not load English locale.',
+                        fallbackError
+                    );
+
+                    return;
+
+                }
+
+            }else{
+
+                return;
+
+            }
+
+        }
+
+
+        /*
+         * Apply language.
+         */
+
+        document.documentElement.lang = lang;
+
+        setDirection(lang);
+
+        applyTranslations();
+
+        setActiveMenuItem(lang);
+
+
+        /*
+         * Save visitor preference.
+         */
+
+        try{
+
+            localStorage.setItem(
+                'tvloomi_lang',
+                lang
+            );
+
+        }catch(error){
+
+            /*
+             * localStorage may be unavailable.
+             */
+
+        }
+
+    }
+
+
+    /*
+     * ------------------------------------------------------------
+     * LANGUAGE DETECTION
+     * ------------------------------------------------------------
+     *
+     * Priority:
+     *
+     * 1. settings.php forced language
+     * 2. previously selected visitor language
+     * 3. browser language
+     * 4. English
+     *
+     * ------------------------------------------------------------
+     */
+
+    function detectInitialLanguage(){
+
+        const forced =
+            window.TVLOOMI_FORCED_LANG;
+
+
+        /*
+         * 1. Forced language from settings.php
+         */
+
+        if(
+            forced &&
+            forced !== 'auto' &&
+            SUPPORTED.includes(forced)
+        ){
+
+            return forced;
+
+        }
+
+
+        /*
+         * 2. Visitor's previous manual selection
+         */
+
+        try{
+
+            const saved =
+                localStorage.getItem('tvloomi_lang');
+
+
+            if(
+                saved &&
+                SUPPORTED.includes(saved)
+            ){
+
+                return saved;
+
+            }
+
+        }catch(error){
+
+            /*
+             * Ignore localStorage errors.
+             */
+
+        }
+
+
+        /*
+         * 3. Browser language detection
+         */
+
+        const browserLanguages =
+            navigator.languages &&
+            navigator.languages.length
+                ? navigator.languages
+                : [
+                    navigator.language || 'en'
+                ];
+
+
+        for(
+            const browserLanguage
+            of browserLanguages
+        ){
+
+            const normalized =
+                browserLanguage
+                    .toLowerCase()
+                    .replace('_', '-');
+
+
+            /*
+             * Exact match.
+             */
+
+            if(
+                SUPPORTED.includes(normalized)
+            ){
+
+                return normalized;
+
+            }
+
+
+            /*
+             * Language base match.
+             *
+             * Example:
+             *
+             * en-US -> en
+             * fr-FR -> fr
+             * pt-BR -> pt
+             */
+
+            const base =
+                normalized.split('-')[0];
+
+
+            if(
+                SUPPORTED.includes(base)
+            ){
+
+                return base;
+
+            }
+
+        }
+
+
+        /*
+         * 4. English fallback
+         */
+
+        return 'en';
+
+    }
+
+
+    /*
+     * ------------------------------------------------------------
+     * START LANGUAGE SYSTEM
+     * ------------------------------------------------------------
+     */
+
+    loadLanguage(
+        detectInitialLanguage()
+    );
+
+})();
+</script>
+
+
+<!-- =============================================================
+     DOWNLOAD + TRACKING + REVEAL
+============================================================== -->
+
+<script>
+(function(){
+
+    /*
+     * All APK downloads go through download.php.
+     */
+
+    const downloadUrl = 'download.php';
+
+
+    document
+        .querySelectorAll('a[data-download="apk"]')
+        .forEach(function(link){
+
+            link.setAttribute(
+                'href',
+                downloadUrl
+            );
+
+        });
+
+
+    /*
+     * Optional Facebook Pixel tracking.
+     */
+
+    function trackDownload(){
+
+        if(typeof fbq === 'function'){
+
+            fbq(
+                'track',
+                'Lead',
+                {
+                    content_name:
+                        'TV Loomi APK Download',
+
+                    content_category:
+                        'download'
+                }
+            );
+
+        }
+
+    }
+
+
+    document
+        .querySelectorAll('a[data-download="apk"]')
+        .forEach(function(link){
+
+            link.addEventListener(
+                'click',
+                function(){
+
+                    trackDownload();
+
+                }
+            );
+
+        });
+
+
+    /*
+     * Scroll reveal.
+     */
+
+    const observer =
+        new IntersectionObserver(
+            function(entries){
+
+                entries.forEach(
+                    function(entry){
+
+                        if(entry.isIntersecting){
+
+                            entry.target
+                                .classList
+                                .add('show');
+
+                            observer.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    }
+                );
+
+            },
+            {
+                threshold:0.12
+            }
+        );
+
+
+    document
+        .querySelectorAll('.reveal')
+        .forEach(function(element){
+
+            observer.observe(element);
+
+        });
+
+})();
+</script>
+
+
+
+</body></html>
